@@ -1,0 +1,23 @@
+<h1>Liste des produits !</h1>
+
+<h2 *ngIf="loading" class="text-warning">Chargement en cours ! </h2>
+
+
+<table *ngIf="!loading" class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Nom</th>
+    <th scope="col">Description</th>
+    <th scope="col">Prix</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products">
+    <th scope="row">{{ product.id }}</th>
+    <td>{{ product.name }}</td>
+    <td>{{ product.description }}</td>
+    <td>{{ product.price }}</td>
+  </tr>
+  </tbody>
+</table>
